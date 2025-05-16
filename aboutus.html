@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/yinong/enddesign.css">
-    <link rel="stylesheet" href="/yinong/nav.css">
-    <link rel="stylesheet" href="/yinong/banner.css">
+    <meta name="description" content="益农 - 中国乡村新农人培育的一站式服务赋能平台">
+    <title>关于益农 - 益农服务平台</title>
+    <link rel="stylesheet" href="/enddesign.css">
+    <link rel="stylesheet" href="/nav.css">
+    <link rel="stylesheet" href="/banner.css">
 </head>
 <style>
     .banner .p1 {
@@ -89,9 +90,9 @@
 
 <body>
     <div class="banner">
-        <img src="images/bg (1).png">
-        <div class=" logo">
-            <img src="images/logo1.png">
+        <img src="images/bg (1).png" alt="背景图片">
+        <div class="logo">
+            <img src="images/logo1.png" alt="益农logo">
         </div>
         <div class="nav">
             <ul>
@@ -110,10 +111,10 @@
         <h1>新闻报道</h1>
         <div class="brsmall"></div>
         <ul>
+            <!-- Content will be dynamically added by JavaScript -->
         </ul>
         <div class="br"></div>
-        <P>团队专注服务新农人，讲述乡村振兴实践故事，荣登人民日报等权威媒体，报道超30篇，阅读量破5000次！我们以专业术语和精准表达，讲述实践故事，宣传片点击量超50万，为乡村发展贡献智慧和力量，引领乡村振兴新篇章！
-        </P>
+        <p>团队专注服务新农人，讲述乡村振兴实践故事，荣登人民日报等权威媒体，报道超30篇，阅读量破5000次！我们以专业术语和精准表达，讲述实践故事，宣传片点击量超50万，为乡村发展贡献智慧和力量，引领乡村振兴新篇章！</p>
     </div>
     <div class="br"></div>
     <div class="show2">
@@ -121,30 +122,26 @@
         <div class="brsmall"></div>
         <div class="show2photo">
             <ul>
+                <!-- Content will be dynamically added by JavaScript -->
             </ul>
             <div class="br"></div>
-            <P>团队屡获佳绩，曾荣获大学生创新创业项目国家级结项、港澳台侨大学生创新创业大赛金奖、中国国际大学生创新创业大赛银奖等优异成绩，累计获奖80余项，展现了团队在创新创业领域的卓越实力和成果，赢得了广泛社会认可和赞誉！
-            </P>
+            <p>团队屡获佳绩，曾荣获大学生创新创业项目国家级结项、港澳台侨大学生创新创业大赛金奖、中国国际大学生创新创业大赛银奖等优异成绩，累计获奖80余项，展现了团队在创新创业领域的卓越实力和成果，赢得了广泛社会认可和赞誉！</p>
         </div>
     </div>
-
-
-
-
 
     <!-- 页尾 -->
     <div class="last">
         <ul>
             <li>
                 <h1><a href="Serve.html">益农服务</a></h1>
-                <P>宣传与营销技能提升</P>
-                <P>知识与能力全面发展</P>
+                <p>宣传与营销技能提升</p>
+                <p>知识与能力全面发展</p>
                 <p>业务拓展与合作深化</p>
             </li>
             <li>
                 <h1><a href="media.html">益农风采</a></h1>
                 <p>团队动态</p>
-                <P>益农天天课堂</P>
+                <p>益农天天课堂</p>
             </li>
             <li>
                 <h1><a href="aboutus.html">关于益农</a></h1>
@@ -152,17 +149,17 @@
                 <p>团队荣耀</p>
                 <p>未来规划</p>
             </li>
-            <Li>
+            <li>
                 <h1>联系方式</h1>
                 <p>联系方式:</p>
                 <p>15015014339</p>
                 <p>邮箱:</p>
                 <p>526196121@qq.com</p>
-            </Li>
+            </li>
         </ul>
     </div>
-    <script src="enddesign.js"></script>
-    <script src="nav.js"></script>
+    <script src="/enddesign.js"></script>
+    <script src="/nav.js"></script>
     <script>
         let data = [{
             src: 'images/b4(1).png',
@@ -229,20 +226,22 @@
         for (let i = 0; i < 9; i++) {
             const li = document.createElement(`li`)
             li.innerHTML = `
-            <img src="${data[i].src}">  
-        `
+                <img src="${data[i].src}" alt="${data[i].title}">
+                <h3>${data[i].title}</h3>
+                <p>${data[i].plot}</p>
+            `
             ul.appendChild(li);
         }
-
-
 
         //第二个排版进行
         const lastul = document.querySelector(`.show2 ul`)
         for (let i = 9; i < 16; i++) {
             const lastli = document.createElement(`li`)
             lastli.innerHTML = `
-            <img src="${data[i].src}">  
-        `
+                <img src="${data[i].src}" alt="${data[i].title}">
+                <h3>${data[i].title}</h3>
+                <p>${data[i].plot}</p>
+            `
             lastul.appendChild(lastli);
         }
     </script>
