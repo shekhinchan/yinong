@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serve</title>
+    <link rel="stylesheet" href="enddesign.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="banner.css">
+</head>
+<style>
+    /* 对banner进行布局 在baneer css*/
+    
+    .banner .p1 {
+        position: absolute;
+        text-align: center;
+        top: 15%;
+        font-size: 70px;
+    }
+    
+    .banner .p2 {
+        position: absolute;
+        top: 50%;
+        text-align: center;
+        font-size: 70px;
+    }
+    /* 对展示图进行布局 */
+    
+    .show {
+        width: 80%;
+        height: 1525px;
+        border: black solid 2px;
+        margin: auto;
+    }
+    
+    .show li {
+        list-style: none;
+        display: inline-block;
+        width: 40%;
+        margin-left: 7%;
+        margin-top: 4%;
+        vertical-align: top;
+        /* 确保元素顶部对齐 */
+    }
+    
+    .show li:nth-child(2n) {
+        margin-left: 5%;
+    }
+    
+    .show2 {
+        width: 80%;
+        height: 2100px;
+        border: black solid 2px;
+        margin: auto;
+    }
+    
+    .show2 li {
+        list-style: none;
+        display: inline-block;
+        width: 40%;
+        margin-left: 7%;
+        margin-top: 4%;
+        vertical-align: top;
+        /* 确保元素顶部对齐 */
+    }
+    
+    .show2 li:nth-child(2n) {
+        margin-left: 5%;
+    }
+    
+    .show3 {
+        width: 80%;
+        height: 1450px;
+        border: black solid 2px;
+        margin: auto;
+    }
+    
+    .show3 li {
+        list-style: none;
+        display: inline-block;
+        width: 40%;
+        margin-left: 7%;
+        margin-top: 4%;
+        vertical-align: top;
+        /* 确保元素顶部对齐 */
+    }
+    
+    .show3 li:nth-child(2n) {
+        margin-left: 5%;
+    }
+    /* 进行统一安排，下面不影响上面导航栏和banner布局 */
+    
+    li img {
+        width: 507px;
+        height: 400px;
+    }
+    
+    h1,
+    li h3,
+    li p {
+        text-align: center;
+        margin-top: 6%;
+    }
+    
+    li h3 {
+        font-size: 40px;
+    }
+    
+    li p {
+        font-size: 25px;
+    }
+    /* 对第二个展示图布局 */
+</style>
+
+<body>
+    <!-- 对banner 进行布局 -->
+    <div class="banner">
+        <img src="images/bg (1).png">
+        <div class=" logo">
+            <img src="images/logo1.png">
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="HTML2.html">首页</a></li>
+                <li><a href="Serve.html">益农服务</a></li>
+                <li><a href="media.html">益农风采</a></li>
+                <li><a href="aboutus.html">关于益农</a></li>
+                <li class="content">加入我们</li>
+            </ul>
+        </div>
+        <p class="p1">助力乡村振兴</p>
+        <p class="p2">新农人一站式赋能服务</p>
+    </div>
+    <div class="br"></div>
+
+
+
+
+    <!-- 对展示图进行布局 -->
+    <div class="show">
+        <h1>宣传与营销技能提升</h1>
+        <div class="brsmall"></div>
+        <ul>
+        </ul>
+    </div>
+    <div class="br"></div>
+
+    <div class="show2">
+        <h1>知识与能力全面发展</h1>
+        <div class="brsmall"></div>
+        <ul>
+        </ul>
+    </div>
+
+    <div class="br"></div>
+    <div class="show3">
+        <h1>业务拓展与合作深化</h1>
+        <div class="brsmall"></div>
+        <ul>
+        </ul>
+    </div>
+    <div class="br"></div>
+    <!-- //页尾部 -->
+    <div class="last">
+        <ul>
+            <li>
+                <h1><a href="Serve.html">益农服务</a></h1>
+                <P>宣传与营销技能提升</P>
+                <P>知识与能力全面发展</P>
+                <p>业务拓展与合作深化</p>
+            </li>
+            <li>
+                <h1><a href="media.html">益农风采</a></h1>
+                <p>团队动态</p>
+                <P>益农天天课堂</P>
+            </li>
+            <li>
+                <h1><a href="aboutus.html">关于益农</a></h1>
+                <p>新闻报道</p>
+                <p>团队荣耀</p>
+                <p>未来规划</p>
+            </li>
+            <Li>
+                <h1>联系方式</h1>
+                <p>联系方式:</p>
+                <p>15015014339</p>
+                <p>邮箱:</p>
+                <p>526196121@qq.com</p>
+            </Li>
+        </ul>
+    </div>
+</body>
+<script src="enddesign.js"></script>
+<script src="nav.js"></script>
+
+<script>
+    //用数组对象装所有对象
+    let data = [{
+            src: 'images/b3(1).png',
+            title: '短视频拍摄剪辑培训',
+            plot: '利用社交媒体平台进行产品宣传和推广，提升内容创新性、质量和类型多样性。',
+        }, {
+            src: 'images/b3(2).png',
+            title: '数字营销技能培训',
+            plot: '涵盖网店入驻、直播带货等相关知识，培养主播的语言和应变能力，优化产品介绍与展示方式。',
+        }, {
+            src: 'images/b3(3).png',
+            title: '宣传片定制',
+            plot: '结合当地及团队港澳台侨成员特色，拍摄具有吸引力的宣传片。',
+        }, {
+            src: 'images/b3(4).png',
+            title: '新农人IP打造和宣传',
+            plot: '通过多渠道讲述新农人故事，提升其在当地农户中的影响力，并通过纪录片、专题报道等形式宣传新农人企业。',
+        }, {
+            src: 'images/b3(5).png',
+            title: '图文设计课程',
+            plot: '教授设计软件和PS用法，提升新农人图文设计能力和审美水平。',
+        }, {
+            src: 'images/b3(6).png',
+            title: '文化课堂',
+            plot: '与当地非遗或特色文化机构对接，丰富新农人的文化内涵和体验。',
+        }, {
+            src: 'images/b3(7).png',
+            title: '政策解读与应用',
+            plot: '解读国家和地方农业政策，帮助新农人了解政策导向，申请政策支持和补贴。',
+        }, {
+            src: 'images/b3(8).png',
+            title: '市场分析与调研',
+            plot: '研究消费者行为，利用经济学原理提供市场趋势分析。',
+        }, {
+            src: 'images/b3(9).png',
+            title: '金融知识教育',
+            plot: '教授新农人理解和利用金融工具，如小额贷款、农业保险等。',
+        }, {
+            src: 'images/b3(10).png',
+            title: '产品定位与品牌建设',
+            plot: '根据市场调研结果确定产品独特卖点和目标消费群体，创建农产品品牌，设计品牌标识、包装和宣传材料。',
+        }, {
+            src: 'images/b3(11).png',
+            title: '一二三产融合规划',
+            plot: '如农业+文旅的可行性分析和设计实施方案，助力新农人拓展业务领域。',
+        }, {
+            src: 'images/b3(12).png',
+            title: '农产品质量控制与认证',
+            plot: '帮助新农人搜集整理申请有机认证、地理标志产品认证等的资料，提升农产品市场竞争力。',
+        }]
+        //开始对头两个对象布局
+    const topul = document.querySelector('.show ul');
+    for (let i = 0; i < 4; i++) {
+        const topli = document.createElement(`li`)
+        topli.innerHTML = `
+            <img src="${data[i].src}">  
+            <h3>${data[i].title}</h3>
+            <P>${data[i].plot}</P>
+                `
+            //这里连接习惯加双引号！！
+        topul.appendChild(topli)
+    }
+
+
+
+    //对第二个进行布局
+    const secondul = document.querySelector('.show2 ul');
+    for (let i = 4; i < 9; i++) {
+        const secondli = document.createElement(`li`)
+        secondli.innerHTML = `
+            <img src="${data[i].src}">  
+            <h3>${data[i].title}</h3>
+            <P>${data[i].plot}</P>
+                `
+            //这里连接习惯加双引号！！
+        secondul.appendChild(secondli)
+    }
+    const lastul = document.querySelector('.show3 ul');
+    for (let i = 9; i < 12; i++) {
+        const lastli = document.createElement(`li`)
+        lastli.innerHTML = `
+            <img src="${data[i].src}">  
+            <h3>${data[i].title}</h3>
+            <P>${data[i].plot}</P>
+                `
+            //这里连接习惯加双引号！！
+        lastul.appendChild(lastli)
+    }
+</script>
+
+</html>

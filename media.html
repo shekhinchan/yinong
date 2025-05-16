@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="enddesign.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="banner.css">
+</head>
+<style>
+    .banner p {
+        position: absolute;
+        margin: auto;
+        line-height: 600%;
+        font-size: 70px;
+        color: black;
+    }
+    
+    .show h1 {
+        margin-top: 5%;
+        font-size: 40px;
+        text-align: center;
+    }
+    
+    .show {
+        width: 80%;
+        height: 1525px;
+        border: black solid 2px;
+        margin: auto;
+    }
+    
+    .show li {
+        list-style: none;
+        display: inline-block;
+        width: 40%;
+        margin-left: 7%;
+        margin-top: 4%;
+        vertical-align: top;
+        /* 确保元素顶部对齐 */
+    }
+    
+    .show li:nth-child(2n) {
+        margin-left: 5%;
+    }
+    
+    .show2 {
+        margin: auto;
+        width: 80%;
+        height: 400px;
+        border: black solid 2px;
+    }
+    
+    .show2 p {
+        font-size: 28px;
+    }
+</style>
+
+<body>
+    <!-- 对banner 进行布局 -->
+    <div class="banner">
+        <img src="images/bg (1).png">
+        <div class=" logo">
+            <img src="images/logo1.png">
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="HTML2.html">首页</a></li>
+                <li><a href="Serve.html">益农服务</a></li>
+                <li><a href="media.html">益农风采</a></li>
+                <li><a href="aboutus.html">关于益农</a></li>
+                <li class="content">加入我们</li>
+            </ul>
+        </div>
+        <p class="p1">益农好风采</p>
+    </div>
+    <div class="br"></div>
+    <div class="show">
+        <h1>团队动态</h1>
+        <div class="showphoto">
+            <ul>
+            </ul>
+        </div>
+    </div>
+
+    <div class="br"></div>
+
+    <div class="show2">
+        <p>在“三下乡”活动中，“益农”助农实践团前往广东省惠州市的岚滋茶园、三家茶园、粤港澳大湾区绿色农产品生产供应基地及惠州市优茶集茶叶审评中心等地，开展茶产业走访调研，参观了岚滋茶园及其现代化制茶车间，并探索开展茶产业宣传片拍摄、茶产品直播带货等特色实践活动。 通过亲身体验茶叶种植、制茶工艺、文化传承及市场推广的全过程，实践团从“三茶”统筹视域下茶文化、茶产业、茶科技三维视角全面剖析，亲眼见证了“一叶兴，百姓富”的生动实践。 展望未来，“益农”助农实践团将继续秉持初心，深化与泰美镇乡村地区的合作与交流，积极探索更多创新性的乡村茶产业振兴模式与策略，推动泰美镇在生态宜居、产业兴旺、百姓富足的道路上行稳致远，共同谱写乡村振兴的新篇章。
+        </p>
+    </div>
+
+    <!-- 页尾部 -->
+    <div class="br"></div>
+    <!-- //页尾部 -->
+    <div class="last">
+        <ul>
+            <li>
+                <h1><a href="Serve.html">益农服务</a></h1>
+                <P>宣传与营销技能提升</P>
+                <P>知识与能力全面发展</P>
+                <p>业务拓展与合作深化</p>
+            </li>
+            <li>
+                <h1><a href="media.html">益农风采</a></h1>
+                <p>团队动态</p>
+                <P>益农天天课堂</P>
+            </li>
+            <li>
+                <h1><a href="aboutus.html">关于益农</a></h1>
+                <p>新闻报道</p>
+                <p>团队荣耀</p>
+                <p>未来规划</p>
+            </li>
+            <Li>
+                <h1>联系方式</h1>
+                <p>联系方式:</p>
+                <p>15015014339</p>
+                <p>邮箱:</p>
+                <p>526196121@qq.com</p>
+            </Li>
+        </ul>
+    </div>
+</body>
+<script src="enddesign.js"></script>
+<script src="nav.js"></script>
+<script>
+    let data = [{
+        src: 'images/b2(1).png',
+        title: '短视频拍摄剪辑培训',
+        plot: '利用社交媒体平台进行产品宣传和推广，提升内容创新性、质量和类型多样性。',
+    }, {
+        src: 'images/b2(2).png',
+        title: '数字营销技能培训',
+        plot: '涵盖网店入驻、直播带货等相关知识，培养主播的语言和应变能力，优化产品介绍与展示方式。',
+    }, {
+        src: 'images/b2(3).png',
+        title: '宣传片定制',
+        plot: '结合当地及团队港澳台侨成员特色，拍摄具有吸引力的宣传片。',
+    }, {
+        src: 'images/b2(4).png',
+        title: '新农人IP打造和宣传',
+        plot: '通过多渠道讲述新农人故事，提升其在当地农户中的影响力，并通过纪录片、专题报道等形式宣传新农人企业。',
+    }, {
+        src: 'images/b2(5).png',
+        title: '图文设计课程',
+        plot: '教授设计软件和PS用法，提升新农人图文设计能力和审美水平。',
+    }, {
+        src: 'images/b2(6).png',
+        title: '文化课堂',
+        plot: '与当地非遗或特色文化机构对接，丰富新农人的文化内涵和体验。',
+    }, {
+        src: 'images/b1 (4).png',
+        title: '政策解读与应用',
+        plot: '解读国家和地方农业政策，帮助新农人了解政策导向，申请政策支持和补贴。',
+    }, {
+        src: 'images/b1 (5).png',
+        title: '市场分析与调研',
+        plot: '研究消费者行为，利用经济学原理提供市场趋势分析。',
+    }, {
+        src: 'images/b1 (6).png',
+        title: '金融知识教育',
+        plot: '教授新农人理解和利用金融工具，如小额贷款、农业保险等。',
+    }, {
+        src: 'images/b1 (7).png',
+        title: '产品定位与品牌建设',
+        plot: '根据市场调研结果确定产品独特卖点和目标消费群体，创建农产品品牌，设计品牌标识、包装和宣传材料。',
+    }, {
+        src: 'images/b1 (8).png',
+        title: '一二三产融合规划',
+        plot: '如农业+文旅的可行性分析和设计实施方案，助力新农人拓展业务领域。',
+    }, {
+        src: 'images/b1 (12).png',
+        title: '农产品质量控制与认证',
+        plot: '帮助新农人搜集整理申请有机认证、地理标志产品认证等的资料，提升农产品市场竞争力。',
+    }]
+    const ul = document.querySelector(`.show ul`)
+    for (let i = 0; i < 6; i++) {
+        const li = document.createElement(`li`)
+        li.innerHTML = `
+            <img src="${data[i].src}">  
+        `
+        ul.appendChild(li);
+    }
+</script>
+
+</html>

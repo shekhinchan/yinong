@@ -1,0 +1,42 @@
+ /* 增加效果和改动效果 */
+ 
+ .active {
+     font-size: 18px;
+ }
+ 
+ .nav {
+     width: 100%;
+     z-index: 3;
+     /*类似图层概念 */
+     position: absolute;
+     top: 0%;
+     background-color: black;
+     opacity: 0.5;
+ }
+ /* 对导航栏每个元素布局 */
+ 
+ .nav li {
+     width: 19%;
+     height: 50px;
+     display: inline-block;
+     list-style: none;
+     text-align: center;
+     line-height: 50px;
+     box-sizing: border-box;
+     color: white;
+ }
+ /* 对导航栏的link 进行布局 */
+ 
+ .nav li a {
+     text-decoration: none;
+     color: white;
+ }
+ 
+ .logo img {
+     width: 50px;
+     height: 50px;
+     z-index: 4;
+     position: absolute;
+     top: 6px;
+     left: 50px;
+ }

@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="Swiper/swiper-bundle.min.css">
+<link rel="stylesheet" href="enddesign.css">
+<link rel="stylesheet" href="nav.css">
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    /* 进行隔空 */
+    
+    .changecolor {
+        text-decoration: none;
+        font-size: larger;
+        color: azure;
+    }
+    
+    .br {
+        width: 100%;
+        height: 100px;
+    }
+    /* 对于隔离远的进行隔空 */
+    
+    .br2 {
+        width: 100%;
+        height: 200px;
+    }
+    /* edit logo upon the video and nav */
+    /* in nav css */
+    /*  add the button when click this button the video start and stop*/
+    
+    .videos button {
+        display: inline-block;
+        width: 90px;
+        height: 40px;
+        opacity: 0.3;
+        position: absolute;
+        margin: auto;
+        bottom: 10%;
+    }
+    /* 隐藏样式 */
+    
+    .hide {
+        opacity: 0;
+    }
+    /* 对视频（大盒子）进行布局 */
+    
+    .videos {
+        width: 100%;
+        height: 700px;
+        display: flex;
+        justify-content: center;
+        /*让子盒子中间 */
+        position: relative;
+        background-color: black;
+    }
+    /* //对导航栏整体布局 */
+    /* 在nav。css */
+    /* 视频主角 */
+    
+    video {
+        width: 100%;
+        height: 700px;
+    }
+    /* 图片进行设置 */
+    
+    .box {
+        width: 100%;
+        height: 350px;
+    }
+    
+    html,
+    body {
+        position: relative;
+        height: 100%;
+    }
+    
+    body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .swiper {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .swiper-slide {
+        width: 25%;
+    }
+    
+    .swiper-slide:nth-child(2n) {
+        width: 25%;
+    }
+    
+    .swiper-slide:nth-child(3n) {
+        width: 25%;
+    }
+    /*  对第一个进行导览图进行布局*/
+    
+    .firsttop {
+        width: 100%;
+        height: 400px;
+        background-image: url("images/bg (1).png");
+        /* image width 1600px 整个画面对于我电脑around 1600 */
+        position: relative;
+    }
+    
+    .firstbottom ul {
+        position: absolute;
+        width: 80%;
+        height: 200px;
+        bottom: -80px;
+        left: 10%;
+    }
+    
+    .firstbottom ul li {
+        list-style: none;
+        display: inline-block;
+        width: 33%;
+        height: 200px;
+        background-color: whitesmoke;
+        overflow: auto;
+        /* 防止文字元素对盒子进行移动 */
+        position: relative;
+    }
+    
+    .firstbottom ul li h1 {
+        position: absolute;
+        color: darkolivegreen;
+        left: 10%;
+    }
+    
+    .firstbottom ul li p {
+        position: absolute;
+        left: 10%;
+        top: 30%;
+    }
+    
+    .firstbottom li:nth-child(3n) img {
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        z-index: 3;
+        right: 2%;
+        bottom: 3%;
+        /* logo设置 */
+    }
+    /* 对数据框进行布局 */
+    
+    .data {
+        position: absolute;
+        width: 80%;
+        height: 200px;
+        margin: auto;
+        left: 20%;
+    }
+    
+    .data ul li {
+        list-style: none;
+        width: 20%;
+        display: inline-block;
+    }
+    
+    .data ul li h3,
+    .data ul li h1 {
+        font-size: x-large;
+    }
+    
+    .data ul li h1 {
+        color: rgb(21, 225, 21)
+    }
+    
+    .data ul li h1,
+    .data ul li p {
+        display: inline-block;
+    }
+    
+    .data button {
+        position: absolute;
+        left: 35%;
+        top: 60%;
+    }
+    /* 对项目展示1进行布局 */
+    
+    .projectshow1 {
+        width: 85%;
+        height: 750px;
+        background-image: url("images/bg (2).png");
+        position: relative;
+    }
+    
+    .projectshow1 img {
+        width: 70%;
+        height: 23%;
+        position: absolute;
+        left: 0%;
+        top: 3%;
+    }
+    
+    .projectshow1 .projectshowsmall1 {
+        width: 60%;
+        height: 70%;
+        position: absolute;
+        right: 5%;
+        bottom: 10%;
+        background-color: black;
+        opacity: 0.7;
+    }
+    
+    .projectshowsmall1 li {
+        list-style: none;
+        width: 70%;
+        height: 160px;
+        margin-top: 30px;
+        margin-left: 150px;
+    }
+    
+    .projectshowsmall1 li h1,
+    .projectshowsmall1 li p {
+        opacity: 2;
+        color: whitesmoke;
+    }
+    /* 对项目二进行布局 */
+    
+    .projectshow2 {
+        left: 15%;
+        width: 85%;
+        height: 700px;
+        background-image: url("images/bg (3).jpg");
+        position: relative;
+    }
+    
+    .projectshow2 img {
+        width: 70%;
+        height: 23%;
+        position: absolute;
+        right: 0%;
+        top: 3%;
+    }
+    
+    .projectshow2 .top {
+        position: absolute;
+        top: 17%;
+        left: 5%;
+        color: white;
+    }
+    
+    .projectshow2 .top1 {
+        position: absolute;
+        top: 23%;
+        left: 5%;
+        color: white;
+    }
+    
+    .projectshow2 .info {
+        position: absolute;
+        right: 3%;
+        bottom: 6%;
+        font-size: 40px;
+    }
+    
+    .projectshow2 .info a {
+        color: black;
+    }
+    
+    .projectshow2 .projectshowsmall2 {
+        width: 40%;
+        height: 45%;
+        border: #fff solid 1px;
+        border-radius: 30px;
+        position: absolute;
+        left: 5%;
+        bottom: 9%;
+        color: white;
+    }
+    
+    .projectshow2 .projectshowsmall2 p {
+        margin-left: 100px;
+        margin-top: 15%;
+        color: white;
+        display: inline-block;
+        font-size: 25px;
+    }
+    
+    .projectshow2 .projectshowsmall2 span {
+        margin-left: 80px;
+    }
+    
+    .projectshow2 .projectshowsmall2 .num1 {
+        font-size: 50px;
+        margin-top: 50px;
+        margin-left: 100px;
+        display: inline-block;
+    }
+    
+    .projectshowsmall2 .num2 {
+        font-size: 50px;
+        margin-top: 5%;
+        margin-left: 150px;
+        display: inline-block;
+    }
+    /* news 布局 */
+    
+    .news {
+        width: 100%;
+        height: 700px;
+        background-image: url("images/bg(5).png");
+        position: relative;
+    }
+    
+    .newstop {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        background-color: white;
+    }
+    
+    .newstop p {
+        position: absolute;
+        top: 60%;
+        right: 2%;
+        font-size: 50px;
+        color: darkgreen;
+    }
+    
+    .news div {
+        width: 100%;
+        height: 20%;
+        position: absolute;
+        bottom: 0%;
+    }
+    
+    .news ul li {
+        height: 20%;
+        list-style: none;
+        display: inline-block;
+        border-left: #eee solid 2px;
+        border-right: #eee solid 2px;
+    }
+    
+    .news ul li:nth-child(1n) {
+        width: 27.5%;
+    }
+    
+    .news ul li:nth-child(2n) {
+        width: 22%;
+    }
+    
+    .news ul li:nth-child(3n) {
+        width: 29.9%
+    }
+    
+    .news ul li:nth-child(4n) {
+        width: 19.75%
+    }
+    
+    .news ul li:nth-child(2n),
+    .news ul li:nth-child(3n),
+    .news ul li:nth-child(4n) {
+        margin-left: -6px;
+    }
+    
+    .news ul li p {
+        color: #eee;
+        font-size: 50px;
+        text-align: center;
+    }
+    
+    .news .link {
+        font-size: 30px;
+        position: absolute;
+        bottom: 3%;
+        left: 47%;
+        text-align: center;
+    }
+    
+    .news .link a {
+        color: black;
+        text-align: center;
+        text-decoration: none;
+    }
+    /* 对合作单位进行排版 */
+    
+    .cooperation {
+        width: 100%;
+        height: 700px;
+        background-image: url("images/bg(4).png");
+        position: relative;
+    }
+    
+    .cooperation img {
+        width: 70%;
+        height: 23%;
+        position: absolute;
+        top: 3%;
+    }
+    
+    .cooperation .coopsmall {
+        width: 40%;
+        height: 45%;
+        border: #fff solid 1px;
+        border-radius: 30px;
+        position: absolute;
+        left: 5%;
+        bottom: 9%;
+        color: white;
+    }
+    
+    .coopsmall p {
+        margin-left: 60px;
+        margin-top: 15%;
+        color: white;
+        display: inline-block;
+        font-size: 25px;
+    }
+    
+    .coopsmall span {
+        margin-left: 45px;
+    }
+    
+    .coopsmall .num1 {
+        font-size: 30px;
+        margin-top: 50px;
+        margin-left: 100px;
+        display: inline-block;
+    }
+    
+    .coopsmall .num2 {
+        font-size: 30px;
+        margin-top: 5%;
+        margin-left: 150px;
+        display: inline-block;
+    }
+    /* 对尾部进行布局 */
+    /* 在enddesign.css哪里 */
+</style>
+
+<div>
+
+
+    <!-- 视频布局上包导航栏布局 -->
+    <div class="videos">
+        <video src="video/序列 02.mp4" autoplayed loop></video>
+        <!-- edit the logo-->
+        <div class=" logo">
+            <img src="images/logo1.png">
+        </div>
+        <button>播放</button>
+        <!-- 导航栏布局 -->
+        <div class="nav">
+            <ul>
+                <li><a href="HTML2.html">首页</a></li>
+                <li><a href="Serve.html">益农服务</a></li>
+                <li><a href="media.html">益农风采</a></li>
+                <li><a href="aboutus.html">关于益农</a></li>
+                <li class="content">加入我们</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="br"></div>
+
+
+
+    <!-- 图片布局 -->
+    <!-- Swiper -->
+    <div class="box">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/b1 (3).png"></div>
+                <div class="swiper-slide"><img src="images/b1 (4).png"></div>
+                <div class="swiper-slide"><img src="images/b1 (5).png"></div>
+                <div class="swiper-slide"><img src="images/b1 (6).png"></div>
+                <div class="swiper-slide"><img src="images/b1 (7).png"></div>
+                <div class="swiper-slide"><img src="images/b1 (8).png"></div>
+                <div class="swiper-slide"><img src="images/b1 (9).png"></div>
+                <div class="swiper-slide"><img src="images/b1 (10).png"></div>
+                <div class="swiper-slide"><img src="images/b1 (11).png"></div>
+                <div class="swiper-slide"><img src="images/b1 (12).png"></div>
+                <div class="swiper-slide"><img src="images/b1 (13).png"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    </body>
+
+
+    <div class="br">
+    </div>
+
+    <!-- 对第一导览图进行布局 -->
+    <div class="firsttop">
+        <div class="firstbottom">
+            <ul>
+                <li>
+                    <h1>平台简介</h1>
+                    <p>“益农”——中国乡村新农人培育的一站式服务赋能平台，旨在通 过构建一套专业化、定制化的服务体系，精准对接并满足乡村青年 的发展需求，全面提升他们的创新能力与综合素质，为农业农村的 发展注入新的动力与活力。</p>
+                </li>
+                <li>
+                    <h1>平台宗旨</h1>
+                    <p>培养具备前瞻经济学思维和新媒体技能的新型农业人才——新农人 </p>
+                </li>
+                <li>
+                    <h1>平台文化</h1>
+                    <p>开放多元、共建共享</p>
+                    <img src="images/logo1.png">
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- //进行隔空 -->
+    <div class="br2">
+    </div>
+    <!-- //进行数据的排版 -->
+    <div class="data">
+        <ul>
+            <li>
+                <h3>成立时间</h3>
+                <p>
+                    <h1>2019</h1>年</p>
+            </li>
+            <li>
+                <h3>服务新农人</h3>
+                <p>
+                    <h1>3200</h1>余人</p>
+            </li>
+            </li>
+            <li>
+                <h3>帮扶范围</h3>
+                <p>
+                    <h1>24</h1>个县乡村</p>
+            </li>
+            <li>
+                <h3>解决农人需求</h3>
+                <p>
+                    <h1>320</h1>余项</p>
+            </li>
+        </ul>
+        <button><a href="#">了解更多</a></button>
+    </div>
+
+
+    <div class="br2">
+    </div>
+
+    <!-- 对项目展示1  进行布局 -->
+    <div class="projectshow1">
+        <img src="images/bn1 (3).png">
+        <div class="projectshowsmall1">
+            <ul>
+                <li>
+                    <h1>刘桓宏</h1>
+                    <p>惠州市博罗县人，经营管理型新茶农
+                    </p>
+                </li>
+                <li>
+                    <h1>电商直播带货体系搭建</h1>
+                    <p>传授电商直播带货技能，助力开设网店，直播观看人次超 1000人,获赞超50000次,成功拓宽茶叶销售渠道。
+                    </p>
+                </li>
+                <li>
+                    <h1>特色茶产业发展规划</h1>
+                    <p>结合当地产业规划特色，设计高端茶文旅与三产融合发展 方案，助力乡村茶产业转型升级。
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div class="br">
+    </div>
+    <!-- 对项目二进行布局 -->
+    <div class="projectshow2">
+        <img src="images/bn1 (4).png">
+
+        <h1 class="top">夏丽娴</h1>
+        <p class="top1">韶关市始兴县人，酱菜行业技能服务型新农人</p>
+        <div class="projectshowsmall2">
+            <p>青菜品种</p>
+            <p>带动周边农户</p>
+            <span>—————————————————————————————</span>
+            <h1 class="num1">25+</h1>
+            <h1 class="num2">70+</h1>
+        </div>
+        <p class="info"><a href="#">了解更多</a></p>
+    </div>
+
+
+    <div class="br"></div>
+
+    <!-- 对新闻报道进行布局 -->
+    <div class=" newstop">
+        <img src="images/bn1(5).png">
+        <p>团队荣登人民日报等权威媒体</p>
+    </div>
+
+
+
+    <div class="news">
+        <div>
+            <ul>
+                <li>
+                    <p>暨南大学</p>
+                </li>
+                <li>
+                    <p>人民日报</p>
+                </li>
+                <li>
+                    <P>惠州市委办</P>
+                </li>
+                <li>
+                    <p>魅力秦美</p>
+                </li>
+            </ul>
+        </div>
+        <p class="link"><a href="#">了解更多</a></p>
+    </div>
+    <div class="br"></div>
+    <!-- 对合作单位进行排版 -->
+    <div class="cooperation">
+        <img src="images/bn1(6).png">
+        <div class="coopsmall">
+            <p>孵化产教转化基础</p>
+            <p>合作承接培训项目</p>
+            <span>————————————————————————————————————</span>
+            <h1 class="num1">头豹教育</h1>
+            <h1 class="num2">中科索顿</h1>
+        </div>
+    </div>
+
+
+    <div class="br"></div>
+
+    <!-- 对通常的尾部关注进行布局 -->
+    <div class="last">
+        <ul>
+            <li>
+                <h1><a href="Serve.html">益农服务</a></h1>
+                <P>宣传与营销技能提升</P>
+                <P>知识与能力全面发展</P>
+                <p>业务拓展与合作深化</p>
+            </li>
+            <li>
+                <h1><a href="media.html">益农风采</a></h1>
+                <p>团队动态</p>
+                <P>益农天天课堂</P>
+            </li>
+            <li>
+                <h1><a href="aboutus.html">关于益农</a></h1>
+                <p>新闻报道</p>
+                <p>团队荣耀</p>
+                <p>未来规划</p>
+            </li>
+            <Li>
+                <h1>联系方式</h1>
+                <p>联系方式:</p>
+                <p>15015014339</p>
+                <p>邮箱:</p>
+                <p>526196121@qq.com</p>
+            </Li>
+        </ul>
+    </div>
+
+
+    <!-- Swiper JS -->
+    <script src="enddesign.js"></script>
+    <script src="/Swiper/swiper-bundle.min.js"></script>
+    <script src="nav.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        //对导航栏进行布局 当mouse 移动对应框架则放大和不透明
+        // 在nav js
+
+        //对button 当播放时候则继续播放视频 和暂停视频
+
+        const videomovestop = document.querySelector(".videos button");
+        const video = document.querySelector('video')
+        videomovestop.addEventListener("click", () => { //对按钮进行click则播放
+
+            // if (video.paused) { //如果视频不在播放     //.played 返回不是布尔值 .paused 返回的是布尔值  
+            //     video.play() //按了按钮就继续
+            //     videomovestop.classList.remove('.videos button')
+            // } else {
+            //     video.pause() //如果视频在播放就停
+            // }
+            video.play() //按了按钮就继续
+            videomovestop.style.display = 'none';
+
+
+            //当滚动到没视频的时候就不播放是
+
+            window.addEventListener('scroll', () => {
+                const n = document.documentElement.scrollTop
+                if (n > 500) {
+                    video.pause()
+                } else {
+                    video.play()
+                }
+            })
+        })
+        video.addEventListener("click", () => {
+            if (!video.paused) {
+                video.pause();
+            } else {
+                video.play();
+            }
+        })
+
+
+        //对图片滚动进行布局
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            slidesPerView: "auto",
+            spaceBetween: 25,
+
+            autoplay: {
+                delay: 2000,
+                stopOnLastSlide: false,
+                disableOnInteraction: true,
+            }
+        });
+        // 点击加入我们就跳转到最下面
+        // nav.js
+    </script>
+
+    </body>
+    <!-- all edit by chan shek hin -->
+
+</html>
